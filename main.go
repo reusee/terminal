@@ -33,9 +33,9 @@ VteTerminal {
 ]])
 
 local window = Gtk.Window{type = Gtk.WindowType.TOPLEVEL}
-window.on_destroy:connect(function()
-	Sys_exit()
-end)
+window.on_delete_event = function()
+	return true
+end
 
 local term = Vte.Terminal.new()
 term:set_cursor_shape(Vte.CursorShape.IBEAM)
@@ -49,6 +49,7 @@ term:set_scroll_on_keystroke(true)
 term:set_rewrap_on_resize(true)
 term:set_encoding('UTF-8')
 term:set_allow_bold(true)
+
 term:spawn_sync(
 	Vte.PtyFlags.DEFAULT,
 	'.',
@@ -65,6 +66,7 @@ term.on_button_press_event = function(widget, ev)
 		term:copy_clipboard()
 	end
 end
+
 window:add(term)
 
 window:show_all()
