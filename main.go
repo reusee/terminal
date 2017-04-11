@@ -38,9 +38,9 @@ window.on_delete_event = function()
 end
 
 local term = Vte.Terminal.new()
-term:set_cursor_shape(Vte.CursorShape.IBEAM)
+--term:set_cursor_shape(Vte.CursorShape.IBEAM)
 term:set_cursor_blink_mode(Vte.CursorBlinkMode.OFF)
-term:set_font(Pango.FontDescription.from_string('Terminus 14'))
+term:set_font(Pango.FontDescription.from_string('xos4 Terminus 13'))
 term:set_color_cursor(Gdk.RGBA().parse('#fcaf17'))
 term:set_color_cursor_foreground(Gdk.RGBA().parse('black'))
 term:set_scrollback_lines(-1)
