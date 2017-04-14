@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/reusee/lgo"
 	"os"
+
+	"github.com/reusee/lgo"
 )
 
 func main() {
@@ -20,17 +21,6 @@ Gtk = lgi.require('Gtk', '3.0')
 Gdk = lgi.Gdk
 Pango = lgi.Pango
 Vte = lgi.Vte
-
-local css_provider = Gtk.CssProvider()
-Gtk.StyleContext.add_provider_for_screen(
-	Gdk.Screen.get_default(),
-	css_provider,
-	Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-css_provider:load_from_data([[
-VteTerminal {
-	background-color: red;
-}
-]])
 
 local window = Gtk.Window{type = Gtk.WindowType.TOPLEVEL}
 window.on_delete_event = function()
