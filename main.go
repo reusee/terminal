@@ -22,26 +22,21 @@ Gdk = lgi.Gdk
 Pango = lgi.Pango
 Vte = lgi.Vte
 
-local css_provider = Gtk.CssProvider()
-Gtk.StyleContext.add_provider_for_screen(
-	Gdk.Screen.get_default(),
-	css_provider,
-	Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-css_provider:load_from_data([[
-VteTerminal {
-	background-color: red;
-}
-]])
-
 local window = Gtk.Window{type = Gtk.WindowType.TOPLEVEL}
 window.on_delete_event = function()
 	return true
 end
 
 local term = Vte.Terminal.new()
+<<<<<<< HEAD
 term:set_cursor_shape(Vte.CursorShape.BLOCK)
 term:set_cursor_blink_mode(Vte.CursorBlinkMode.OFF)
 term:set_font(Pango.FontDescription.from_string('xos4 Terminus 12'))
+=======
+--term:set_cursor_shape(Vte.CursorShape.IBEAM)
+term:set_cursor_blink_mode(Vte.CursorBlinkMode.OFF)
+term:set_font(Pango.FontDescription.from_string('xos4 Terminus 13'))
+>>>>>>> 88cdc8b8a7bc43b38c9923690a6b93cd78191372
 term:set_color_cursor(Gdk.RGBA().parse('#fcaf17'))
 term:set_color_cursor_foreground(Gdk.RGBA().parse('black'))
 term:set_scrollback_lines(-1)
