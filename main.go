@@ -25,7 +25,7 @@ Vte = lgi.Vte
 local css_provider = Gtk.CssProvider()
 css_provider:load_from_data([[
 vte-terminal {
-    padding: 10px 20px;
+    padding: 0;
 }
 ]])
 Gtk.StyleContext.add_provider_for_screen(
