@@ -147,7 +147,7 @@ term:set_colors(
 
 term:spawn_sync(
 	Vte.PtyFlags.DEFAULT,
-	'.',
+	'/dev/shm',
 	{Vte.get_user_shell()},
 	{},
 	0,
