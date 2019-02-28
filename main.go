@@ -22,17 +22,6 @@ Gdk = lgi.Gdk
 Pango = lgi.Pango
 Vte = lgi.Vte
 
-local css_provider = Gtk.CssProvider()
-css_provider:load_from_data([[
-vte-terminal {
-    padding: 0;
-}
-]])
-Gtk.StyleContext.add_provider_for_screen(
-	Gdk.Screen.get_default(),
-	css_provider,
-	Gtk.STYLE_PROVIDER_PRIORITY_USER)
-
 local window = Gtk.Window{type = Gtk.WindowType.TOPLEVEL}
 window.on_delete_event = function()
 	return true
@@ -52,7 +41,7 @@ term:set_encoding('UTF-8')
 term:set_allow_bold(true)
 term:set_allow_hyperlink(true)
 term:set_mouse_autohide(true)
-term:set_cjk_ambiguous_width(2)
+--term:set_cjk_ambiguous_width(2)
 term:set_colors(
 
 	-- solarized light
