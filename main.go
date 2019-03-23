@@ -111,8 +111,8 @@ term:set_colors(
 	--}
 
 	-- molokai
-	Gdk.RGBA().parse('#CCCCCC'),
-	Gdk.RGBA().parse('#000000'),
+	Gdk.RGBA().parse('#BBBBBB'),
+	Gdk.RGBA().parse('1b1d1e'),
 	{
 		Gdk.RGBA().parse('#1b1d1e'),
 		Gdk.RGBA().parse('#7325FA'),
