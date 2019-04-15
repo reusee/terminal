@@ -1,3 +1,3 @@
 module github.com/reusee/terminal
 
-require github.com/reusee/lgo v0.0.0-20190302054741-2dbf7acea308
+require github.com/reusee/lgo v0.0.0-20190415140654-37c2c6c677f5
