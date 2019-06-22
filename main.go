@@ -1,5 +1,10 @@
 package main
 
+/*
+#cgo LDFLAGS: -lmimalloc
+*/
+import "C"
+
 import (
 	"os"
 
