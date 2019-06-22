@@ -24,6 +24,7 @@ func main() {
 lgi = require 'lgi'
 Gtk = lgi.require('Gtk', '3.0')
 Gdk = lgi.Gdk
+GObject = lgi.GObject
 Pango = lgi.Pango
 Vte = lgi.Vte
 
@@ -157,6 +158,16 @@ term.on_button_press_event = function(widget, ev)
 end
 
 window:add(term)
+
+local accel_group = Gtk.AccelGroup{}
+window:add_accel_group(accel_group)
+accel_group:connect(118, -- 'v'
+  Gdk.ModifierType.CONTROL_MASK,
+  Gtk.AccelFlags.LOCKED,
+  GObject.Closure(function()
+    term:paste_clipboard()
+  end)
+)
 
 window:show_all()
 
