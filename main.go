@@ -120,7 +120,7 @@ term:set_colors(
 	Gdk.RGBA().parse('#BBBBBB'),
 	Gdk.RGBA().parse('1b1d1e'),
 	{
-		Gdk.RGBA().parse('#1b1d1e'),
+		Gdk.RGBA().parse('#232323'),
 		Gdk.RGBA().parse('#7325FA'),
 		Gdk.RGBA().parse('#23E298'),
 		Gdk.RGBA().parse('#60D4DF'),
