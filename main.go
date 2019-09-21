@@ -37,6 +37,7 @@ local term = Vte.Terminal.new()
 term:set_cursor_shape(Vte.CursorShape.BLOCK)
 term:set_cursor_blink_mode(Vte.CursorBlinkMode.OFF)
 term:set_font(Pango.FontDescription.from_string('Terminus (TTF) 12'))
+--term:set_font(Pango.FontDescription.from_string('Cascadia Code 10'))
 term:set_color_cursor(Gdk.RGBA().parse('#fcaf17'))
 term:set_color_cursor_foreground(Gdk.RGBA().parse('black'))
 term:set_scrollback_lines(-1)
@@ -159,6 +160,7 @@ end
 
 window:add(term)
 
+--[[
 local accel_group = Gtk.AccelGroup{}
 window:add_accel_group(accel_group)
 accel_group:connect(118, -- 'v'
@@ -168,6 +170,7 @@ accel_group:connect(118, -- 'v'
     term:paste_clipboard()
   end)
 )
+--]]
 
 window:show_all()
 
