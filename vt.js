@@ -10,12 +10,6 @@ const win = new Gtk.Window({
 });
 win.connect('delete-event', () => true)
 
-function rgba(desc) {
-  const color = new Gdk.RGBA()
-  color.parse(desc)
-  return color
-}
-
 const term = new Vte.Terminal({
   cursor_shape: Vte.CursorShape.BLOCK,
   cursor_blink_mode: Vte.CursorBlinkMode.OFF,
@@ -30,8 +24,6 @@ const term = new Vte.Terminal({
   font_desc: Pango.FontDescription.from_string('Terminus (TTF) 12'),
   pointer_autohide: true,
 })
-term.set_color_background(rgba('#2a2a2a'))
-term.set_color_foreground(rgba('#BBBBBB'))
 
 term.spawn_sync(
 	Vte.PtyFlags.DEFAULT,
