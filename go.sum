@@ -4,3 +4,5 @@ github.com/reusee/lgo v0.0.0-20190302054741-2dbf7acea308 h1:SBy6blL9flX0gJJv+nMY
 github.com/reusee/lgo v0.0.0-20190302054741-2dbf7acea308/go.mod h1:VPaga7sfCzUzbjzzpxpUSkhraCC+uWcRum7e01psIQA=
 github.com/reusee/lgo v0.0.0-20190415140654-37c2c6c677f5 h1:wKnjjy+boEiOKAaSkbnS81QvanXvwz65u7ZRc+go5gg=
 github.com/reusee/lgo v0.0.0-20190415140654-37c2c6c677f5/go.mod h1:VPaga7sfCzUzbjzzpxpUSkhraCC+uWcRum7e01psIQA=
+github.com/reusee/lgo v0.0.0-20200903070600-8601d3e49f90 h1:zcp9tyTqjr7v9J0Ic2IETGx2XpHpVx00lDM9vTZo974=
+github.com/reusee/lgo v0.0.0-20200903070600-8601d3e49f90/go.mod h1:VPaga7sfCzUzbjzzpxpUSkhraCC+uWcRum7e01psIQA=
